@@ -1,0 +1,97 @@
+
+/* social links */
+
+.links_sociales a{
+  font-size: 14px;
+  font-weight: 100;
+  color: black;
+}
+
+/*logo*/
+
+.logo h1{
+  font-size: 16px;
+}
+/*large*/
+.large{
+  border:500px;
+}
+header {  
+  padding: 20px 0;
+  border-bottom: 1px solid #e9ecef; 
+  margin-bottom: 30px;
+}
+/*color*/
+.blue-color{
+  color: blue;
+}
+.brown-text{
+  color: brown;
+}
+
+/*background*/
+.body{
+  background: white; 
+}
+
+.color{
+  background: #A1DEF4
+}
+
+.black-text {
+  color: black;
+}
+/*caja*/
+.caja{
+  margin-bottom: 20px;
+}
+h2 {
+  font-family: lobster, monospace;
+}
+
+p {
+  font-size: 16px;
+  font-family: monospace;
+}
+/*border*/
+.border{
+  border-style: solid;
+  border-left: 40px;
+  border-bottom: 40px;
+  border-right: 40px;
+  border-top: 40px
+  border-radius:50;
+}
+.image{
+    border-color: silver;
+  border-width: 50px;
+  border-style: solid;
+  border-radius: 100%;
+}
+
+.thick-border {
+  border-color: silver;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 100%;
+}
+
+.smaller-font{
+  width: 700px;
+}
+
+.smaller-image {
+  width: 100px;
+}
+/*footer*/
+.footer{
+
+  background: #fff;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  text-align: center;
+  color: #000000;
+
+}
