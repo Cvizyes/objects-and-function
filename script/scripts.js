@@ -54,7 +54,10 @@
 // })
 
 
+ 
 
+
+ /*
 
 //primitives vs objects
 
@@ -95,10 +98,40 @@ change(age, obj);
 
 console.log(age);
 console.log(obj.city);
+*/
 
 
 
+//lecture: passing functions as arguments
+var years = [1990,1997,1995,2001,1990];
+function arrayCalc(arr,fn) {
+	var arrRes =[];
+	for (var i = 0; i < arr.length; i++) {
+		arrRes.push(fn(arr[i]));
+	}
+	return arrRes;
+}
 
+function calculateAge(el) {
+	return 2017 - el;
 
+}
+
+function isFullAge(el){
+	return el >= 18;
+
+}
+function maxHeartRate(el){
+	if (el >= 18 && el <= 81){
+		return Math.round(206.9-(0.67 * el));
+	}else{
+		return -1;
+	}
+}
+var ages = arrayCalc(years,calculateAge);
+var fullAges= arrayCalc(ages,isFullAge);
+
+ console.log(ages);
+ console.log(fullAges);
 
 
