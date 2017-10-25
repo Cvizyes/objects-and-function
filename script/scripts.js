@@ -101,7 +101,7 @@ console.log(obj.city);
 */
 
 
-
+/*
 //lecture: passing functions as arguments
 var years = [1990,1997,1995,2001,1990];
 function arrayCalc(arr,fn) {
@@ -133,5 +133,30 @@ var fullAges= arrayCalc(ages,isFullAge);
 
  console.log(ages);
  console.log(fullAges);
+*/
 
 
+//returning functions
+
+function  interview(job){
+	if (job === 'designer'){
+		return function(name){
+			console.log('name + can you please explain what ux designe is?');
+		}
+	}else if (job === 'teacher'){
+		return function (name){
+			console.log('what subject do you teach,' + name + '?');
+		}
+	}else{
+		return function(name){
+			console.log('hello ' + name + ', what do you do?');
+		}
+	}
+}
+
+var teacherquestion= interview('teacher')
+teacherquestion('carlos');
+var designer = interview('designe');
+designer('juan');
+designer('pedro');
+interview('teacher')('manuel');
