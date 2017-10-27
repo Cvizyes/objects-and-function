@@ -250,7 +250,7 @@ console.log(juan.lastName);
 
 */
 
-
+/*
 function retirement (retirementAge) {
 	var a = 'years left until';
 	return function(yearOfBirth){
@@ -287,8 +287,67 @@ designer('pedro');
 interview('teacher')('manuel');
 
 
+*/
+
+
+//bind call and apply
+
+
+
+var carlos = {
+	name: 'carlos',
+	age: 22,
+	job:'progammer',
+	presentation: function (style,timeOfDay){
+		if (style === 'formal'){
+			console.log('Good' + timeOfDay +' ' + 'ladies and glentlemen! I\'m ' + this.name + ', I\'m a,'+ this.job + 'and I\'m '+ this.age + "years old");
+		}else if ( style === 'friendly'){
+			console.log('what\'s up?' + 'I\'m ' + this.name + ', I\'m a,'+ this.job + 'and I\'m '+ this.age + 'years old. have a nice'+ timeOfDay +'.');
+
+		}
+
+		
+	}
+};
+var manuel  = {
+	name: 'Manuel',
+	age: 24,
+	job:'teacher'
+};
+
+carlos.presentation('formal','morning');
+carlos.presentation.call(manuel,'friendly','everning');
+
+
+var carlosfriendly= carlos.presentation.bind(carlos,'friendly');
+carlosfriendly('morning');
+
+var manuelfriendly= carlos.presentation.bind(manuel,'formal');
+manuelfriendly('night');
 
 
 
 
 
+
+var years = [ 1990, 1996,1937,2005, 1998];
+
+function arrayCalc(arr, fn){
+	var arrRes=[];
+	for ( var i = 0; i < arr.length; i++) {
+		arrRes.push(fn(arr[i]));
+	}
+	return arrRes;
+}
+
+function calculateAge(el) {
+	return 2017- el;
+}
+function isFullAge(limit, el) {
+	return el >= limit;
+}
+
+var ages = arrayCalc(years,calculateAge);
+var fullJapan = arrayCalc(ages, isFullAge.bind(this,20));
+console.log(ages);
+console.log(fullJapan);
