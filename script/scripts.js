@@ -166,7 +166,11 @@ interview('teacher')('manuel');
 */
 
 
-//
+
+
+
+
+//IIFE
 /*
 function game (){
 	var score = Math.random() * 10;
@@ -174,6 +178,8 @@ function game (){
 }
 game();
 */
+
+/*
 (function (){
 	var score  = Math.random() * 10;
 	console.log(score >=5);
@@ -182,4 +188,84 @@ game();
 (function (goodluck){
 	var score  = Math.random() * 10;
 	console.log(score >=5 - goodluck);
-})(5);
+})(5);*/
+
+
+
+
+
+
+//closures
+ 
+ // function retirement(retirementAge){
+ // 	var a = ' years left until retirement.';
+ // 	return function(yearOfBirth){
+ // 		var age= 2017- yearOfBirth;
+ // 		console.log((retirementAge - age) + a);
+ // 	}
+ // }
+
+ // var retirementUs = retirement (77);
+ // retirementUs(1990);
+ // retirement(77)(1990);
+
+
+
+
+
+
+////// program quuestion
+/*
+var carlos={
+	name:'carlos',
+	yearofbirth:1995,
+	job:'teacher'
+};
+
+var Person = function(name,yearofbirth,job){
+this.name= name;
+this.yearofbirth= yearofbirth;
+this.job=job;
+this.calculateAge=function(){
+	console.log(2016-this.yearofbirth)
+};
+
+Person.prototype.lastName = 'vizcaino';
+
+}
+
+var carlos = new Person('carlos',1995,'teacher');
+var gabriel = new Person('gabriel', 1994,'player');
+var juan = new Person('juan',1990,'futbollista');
+
+
+carlos.calculateAge();
+gabriel.calculateAge();
+juan.calculateAge(); 
+
+
+console.log(carlos.lastName);
+console.log(gabriel.lastName);
+console.log(juan.lastName);  
+
+*/
+
+
+function retirement (retirementAge) {
+	var a = 'years left until';
+	return function(yearOfBirth){
+		var age= 2017 - yearOfBirth;
+		console.log((retirementAge-age)+a);
+	}
+}
+
+var retirementUs= retirement(66);
+retirementUs(1995)
+
+
+
+
+
+
+
+
